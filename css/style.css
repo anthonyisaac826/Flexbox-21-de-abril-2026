@@ -1,0 +1,57 @@
+* {
+    /*remover bordes del navegador */
+    padding: 0;
+    margin: 0;
+}
+nav {
+    display: flex; /*Activar FlexBox */
+    justify-content: space-around;
+    align-items: center;
+    background-color: chocolate; /*color de fondo del nav */
+}
+nav img {
+    width: 150px; /*tamaño del logo */
+}
+nav a {
+    font-size: 22px; /*tamaño del texto */
+    font-weight: 500; /*grosor del texto */
+    color: black; /*color de los enlaces */
+
+    padding: 16px; /*espacio dentro del enlace */
+    transition: 0.7s; /*tiempo para volver al estado normal */
+}
+nav a:hover {
+    background-color: beige; /*color de fondo al pasar el mouse encima */
+    transition: 0.7s; /*tiempo para llenar de color el fondo */
+}
+
+.servicios {
+    display: flex;
+    justify-content: space-evenly; /*alineacion horizontal */
+    flex-wrap: wrap; /*Usar varias lineas */
+    gap: 10px; /*separar las tarjetas */
+    margin-top: 20px; /*separa las tarjetas del menu */
+}
+.servicio {
+    display: flex;
+    flex-direction: column; /*para ordenar los elementos en vertical */
+    align-items: center; /*alinear texto e imagen al centro */
+    gap: 8px; /*separacion */
+    margin: 10px; 
+}
+
+.servicio img {
+    width: 280px;
+    height: 200px;
+    object-fit: cover; /*para que la imagen llene el espacio sin deformarse */
+    border-radius: 10px; /*borde redondeado */
+}
+
+@media (width < 550px) {/* si la pantalla es muy pequeña */
+    nav {
+        display: flex;
+        flex-direction: column; /*menu vertical si la pantalla es pequeña */
+        align-items: center;
+        justify-content: center;
+    }
+}
